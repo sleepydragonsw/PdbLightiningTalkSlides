@@ -31,13 +31,10 @@
 <section>
     <h3>PDB - Hardcoded Breakpoints</h3>
     <pre>
-    def main():
-        print("Hello, welcome")
+    with open(__file__, "rt") as f:
         <b>import pdb; pdb.set_trace()</b>
-        with open(__file__, "rt") as f:
-            for line in f:
-                handle_line(line)
-        return 0
+        for line in f:
+            handle_line(line)
     </pre>
 </section>
 
